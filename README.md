@@ -24,8 +24,8 @@ dependencies {
 ```
 ### 特征 ###
 库由三部分组成：
-- AdaptiveTableLayout（视图）
-- LinkedAdaptiveTableAdapter（适配器）
+- AdaptiveTableLayout（View）
+- LinkedAdaptiveTableAdapter（Adapter）
 - ViewHolderImpl (ViewHolder)
 
 ### 用法 ###
@@ -49,51 +49,51 @@ dependencies {
 
 ```groovy
 //返回固定标题模式
-boolean  isHeaderFixed ();
+boolean isHeaderFixed();
 
 //返回实体行标题模式
-boolean  isSolidRowHeader ()
+boolean isSolidRowHeader();
 
 //返回拖放模式
-boolean  isDragAndDropEnabled ()
+boolean isDragAndDropEnabled();
 
 //如果布局方向是 RightToLeft 则返回 true 
-boolean  isRTL ()
+boolean isRTL();
 
 //设置固定标题模式
-void  setHeaderFixed ( boolean  headerFixed )
+void setHeaderFixed ( boolean headerFixed )
 
 //设置实体行标题模式
-void  setSolidRowHeader ( boolean  solidRowHeader )
+void setSolidRowHeader ( boolean solidRowHeader )
  1.2.0 
 //设置拖放模式
-void  setDragAndDrow ( boolean  enabled )
+void setDragAndDrow ( boolean enabled )
 
 /**
  * 使用不可变数据设置适配器。
 * 创建带有布局行、列和数据行、列之间链接的包装器。
 * 在拖放事件中只更改链接但不更改适配器中的数据。
-*/ void setAdapter ( @Nullable AdaptiveTableAdapter适配器) 
+*/ void setAdapter ( @Nullable AdaptiveTableAdapter adapter) 
    
 
 /**
  * 使用 MUTABLE 数据设置适配器。
 * 需要实现切换行列的方法。    
 * 请勿用于大数据！！
-*/ void setAdapter ( @Nullable DataAdaptiveTableLayoutAdapter适配器) 
+*/ void setAdapter ( @Nullable DataAdaptiveTableLayoutAdapter adapter) 
    
 
 //通知任何已注册的观察者数据集已更改。
-void  notifyDataSetChanged ()
+void notifyDataSetChanged ()
 
 //通知任何已注册的观察者该项目已更改。
-void  notifyItemChanged ( int  rowIndex , int  columnIndex )
+void notifyItemChanged ( int rowIndex , int columnIndex )
 
 //通知任何注册的观察者，rowIndex 的行已经改变。
-void  notifyRowChanged ( int  rowIndex )
+void notifyRowChanged ( int rowIndex )
 
 //通知所有已注册的观察者 columnIndex 的列已更改。
-void  notifyColumnChanged ( int  columnIndex )
+void notifyColumnChanged ( int columnIndex )
 ```
 #### 适配器 ####
 您可以使用适配器接口：AdaptiveTableAdapter 和 DataAdaptiveTableLayoutAdapter。但为了简化使用，库包含基本适配器： <b>BaseDataAdaptiveTableLayoutAdapter。</b> 和 <b>LinkedAdaptiveTableAdapter</b>.
