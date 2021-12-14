@@ -10,25 +10,25 @@
 #### Take a look at the animation of <strong><a target="_blank" href="https://www.youtube.com/watch?v=YTwpEPIlhuE">AdaptiveTableLayout for Android on YouTube</a></strong> in HD quality. For using this library in a valuable way, you can find our CSV Editor app on the <a target="_blank"  href="https://play.google.com/store/apps/details?id=com.cleveroad.tablelayout">Google Play Store</a> or on <a target="_blank"  href="https://appetize.io/app/wgacjavwr57fec241bq802gzcg?device=nexus5&scale=75&orientation=portrait&osVersion=7.0">Appetize</a>.
 [![Awesome](/images/youtube.png)](https://www.youtube.com/watch?v=YTwpEPIlhuE)[![Awesome](/images/google-play.png)](https://play.google.com/store/apps/details?id=com.cleveroad.tablelayout)[![Awesome](/images/appertize.png)](https://appetize.io/app/wgacjavwr57fec241bq802gzcg?device=nexus5&scale=75&orientation=portrait&osVersion=7.0)
 
-The main goal of the library is to apply all its functions in the process of working with CSV files. Moreover, it will give you a competitive edge over others. 
+该库的主要目标是在处理 CSV 文件的过程中应用其所有功能。此外，它会让你比其他人更具竞争优势。
 
 [![Awesome](/images/logo-footer.png)](https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts)
 <br/>
-## Setup and usage
-### Installation
-by gradle : 
+## 设置和使用
+### 安装
+通过 gradle : 
 ```groovy
 dependencies {
     implementation "com.cleveroad:adaptivetablelayout:1.2.1"
 }
 ```
-### Features ###
-Library consists of three parts:
-- AdaptiveTableLayout (View)
-- LinkedAdaptiveTableAdapter (Adapter)
+### 特征 ###
+库由三部分组成：
+- AdaptiveTableLayout（视图）
+- LinkedAdaptiveTableAdapter（适配器）
 - ViewHolderImpl (ViewHolder)
 
-### Usage ###
+### 用法 ###
 #### AdaptiveTableLayout ####
 ```XML
   <com.cleveroad.adaptivetablelayout.AdaptiveTableLayout
@@ -40,12 +40,12 @@ Library consists of three parts:
         app:solidRowHeaders="true"
         app:dragAndDropEnabled="true"/>
 ```
-|  attribute name | description |
+|  属性名称	 | 描述 |
 |---|---|
-| cellMargin  | margin between cards |
-| fixedHeaders  | fixed headers mode. If enable, headers always will be displayed in the corners. |
-| solidRowHeaders  | solid row headers mode. If enable, row header will change its position with dragging row. |
-| dragAndDropEnabled | drag and drop mode. If enable, column or row will change its position with dragging after long press on row or column header. |
+| cellMargin  | 单元格边距 |
+| fixedHeaders  | 固定标题模式。如果启用，标题将始终显示在角落。|
+| solidRowHeaders  | 实心行标题模式。如果启用，行标题将随着拖动行改变其位置。|
+| dragAndDropEnabled | 拖放模式。如果启用，长按行或列标题后，列或行将通过拖动更改其位置。|
 
 ```groovy
 //返回固定标题模式
