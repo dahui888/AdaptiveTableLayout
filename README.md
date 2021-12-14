@@ -1,9 +1,9 @@
-# AdaptiveTableLayout [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) <img src="https://www.cleveroad.com/public/comercial/label-android.svg" height="19"> <a href="https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts"><img src="https://www.cleveroad.com/public/comercial/label-cleveroad.svg" height="19"></a>
+# 自适应表格布局 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) <img src="https://www.cleveroad.com/public/comercial/label-android.svg" height="19"> <a href="https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts"><img src="https://www.cleveroad.com/public/comercial/label-cleveroad.svg" height="19"></a>
 ![Header image](/images/header.png)
 
-## Welcome the new CSV Library AdaptiveTableLayout for Android by Cleveroad
+## 欢迎 Cleveroad 推出适用于 Android 的新 CSV 库 AdaptiveTableLayout
 
-Pay your attention to our new library that makes it possible to read, edit and write CSV files. If you use Android-based device, you can easily use our library for implementation of all aforementioned actions. In addition, you will be able to change rows and columns, display the picture via link, and align the required data. It will surely help you cope with your tasks faster and make your output higher. AdaptiveTableLayout library is at your disposal.
+请注意我们的新库，它使读取、编辑和写入 CSV 文件成为可能。如果您使用基于 Android 的设备，您可以轻松使用我们的库来实现上述所有操作。此外，您将能够更改行和列，通过链接显示图片，并对齐所需的数据。它肯定会帮助您更快地处理任务并提高您的输出。AdaptiveTableLayout 库可供您使用。
 
 ![Demo image](/images/demo.gif)
 
@@ -48,54 +48,54 @@ Library consists of three parts:
 | dragAndDropEnabled | drag and drop mode. If enable, column or row will change its position with dragging after long press on row or column header. |
 
 ```groovy
-// Return fixed headers mode
-boolean isHeaderFixed(); 
+//返回固定标题模式
+boolean  isHeaderFixed ();
 
-// Return solid row headers mode
-boolean isSolidRowHeader()
+//返回实体行标题模式
+boolean  isSolidRowHeader ()
 
-// Return drag and drop mode
-boolean isDragAndDropEnabled()
+//返回拖放模式
+boolean  isDragAndDropEnabled ()
 
-// Return true if layout direction is RightToLeft
-boolean isRTL()
+//如果布局方向是 RightToLeft 则返回 true 
+boolean  isRTL ()
 
-// Set fixed headers mode
-void setHeaderFixed(boolean headerFixed)
+//设置固定标题模式
+void  setHeaderFixed ( boolean  headerFixed )
 
-// Set solid row headers mode
-void setSolidRowHeader(boolean solidRowHeader)
-1.2.0
-// Set drag and drop mode
-void setDragAndDrow(boolean enabled)
-
-/**
- * Set adapter with IMMUTABLE data.
- * Create wrapper with links between layout rows, columns and data rows, columns.
- * On drag and drop event just change links but not change data in adapter.
- */
-void setAdapter(@Nullable AdaptiveTableAdapter adapter)
+//设置实体行标题模式
+void  setSolidRowHeader ( boolean  solidRowHeader )
+ 1.2.0 
+//设置拖放模式
+void  setDragAndDrow ( boolean  enabled )
 
 /**
- * Set adapter with MUTABLE data.
- * You need to implement switch rows and columns methods.    
- * DO NOT USE WITH BIG DATA!!
- */
-void setAdapter(@Nullable DataAdaptiveTableLayoutAdapter adapter)
+ * 使用不可变数据设置适配器。
+* 创建带有布局行、列和数据行、列之间链接的包装器。
+* 在拖放事件中只更改链接但不更改适配器中的数据。
+*/ void setAdapter ( @Nullable AdaptiveTableAdapter适配器) 
+   
 
-// Notify any registered observers that the data set has changed.
-void notifyDataSetChanged()
+/**
+ * 使用 MUTABLE 数据设置适配器。
+* 需要实现切换行列的方法。    
+* 请勿用于大数据！！
+*/ void setAdapter ( @Nullable DataAdaptiveTableLayoutAdapter适配器) 
+   
 
-// Notify any registered observers that the item has changed.
-void notifyItemChanged(int rowIndex, int columnIndex)
+//通知任何已注册的观察者数据集已更改。
+void  notifyDataSetChanged ()
 
-// Notify any registered observers that the row with rowIndex has changed.
-void notifyRowChanged(int rowIndex)
+//通知任何已注册的观察者该项目已更改。
+void  notifyItemChanged ( int  rowIndex , int  columnIndex )
 
-// Notify any registered observers that the column with columnIndex has changed.
-void notifyColumnChanged(int columnIndex)
+//通知任何注册的观察者，rowIndex 的行已经改变。
+void  notifyRowChanged ( int  rowIndex )
+
+//通知所有已注册的观察者 columnIndex 的列已更改。
+void  notifyColumnChanged ( int  columnIndex )
 ```
-#### Adapter ####
+#### 适配器 ####
 You could use adapter interfaces: AdaptiveTableAdapter and DataAdaptiveTableLayoutAdapter. But to simplify the usage, library contains base adapters: <b>BaseDataAdaptiveTableLayoutAdapter</b> and <b>LinkedAdaptiveTableAdapter</b>.
 
 <b>BaseDataAdaptiveTableLayoutAdapter</b> - simple adapter which works with light data. WARNING! on each row/column switch, original data will be changed. 
@@ -144,28 +144,3 @@ Follow us:
 
 [![Awesome](/images/social/facebook.png)](https://www.facebook.com/cleveroadinc/)   [![Awesome](/images/social/twitter.png)](https://twitter.com/cleveroadinc)   [![Awesome](/images/social/google.png)](https://plus.google.com/+CleveroadInc)   [![Awesome](/images/social/linkedin.png)](https://www.linkedin.com/company/cleveroad-inc-)   [![Awesome](/images/social/youtube.png)](https://www.youtube.com/channel/UCFNHnq1sEtLiy0YCRHG2Vaw)
 <br/>
-### License ###
-* * *
-    The MIT License (MIT)
-    
-    Copyright (c) 2016 Cleveroad Inc.
-    
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-    
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-    
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
-
-[changelog history]: /CHANGELOG.md
