@@ -128,8 +128,8 @@ mTableAdapter.notifyDataSetChanged();
         app:solidRowHeaders="true"
         app:dragAndDropEnabled="true"/>
 ```
-#### Adapter usage ####
-<a href="sample/src/main/java/com/cleveroad/sample/adapter/SampleLinkedTableAdapter.java"> Adapter sample </a>
+#### Adapter使用 ####
+<a href="sample/src/main/java/com/cleveroad/sample/adapter/SampleLinkedTableAdapter.java"> Adapter 示例 </a>
 
 ## Changelog
 See [changelog history].
