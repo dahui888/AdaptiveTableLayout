@@ -96,15 +96,14 @@ void  notifyRowChanged ( int  rowIndex )
 void  notifyColumnChanged ( int  columnIndex )
 ```
 #### 适配器 ####
-You could use adapter interfaces: AdaptiveTableAdapter and DataAdaptiveTableLayoutAdapter. But to simplify the usage, library contains base adapters: <b>BaseDataAdaptiveTableLayoutAdapter</b> and <b>LinkedAdaptiveTableAdapter</b>.
+您可以使用适配器接口：AdaptiveTableAdapter 和 DataAdaptiveTableLayoutAdapter。但为了简化使用，库包含基本适配器： <b>BaseDataAdaptiveTableLayoutAdapter。</b> 和 <b>LinkedAdaptiveTableAdapter</b>.
 
-<b>BaseDataAdaptiveTableLayoutAdapter</b> - simple adapter which works with light data. WARNING! on each row/column switch, original data will be changed. 
+<b>BaseDataAdaptiveTableLayoutAdapter</b> -处理光数据的简单适配器。警告！在每行/列切换时，原始数据将被更改。
 
-<b>LinkedAdaptiveTableAdapter</b> - adapter which works with heavy data. WARNING! This type of adapter doesn't change original data. It contains matrix with changed items with links on it. To get changed data you need use AdaptiveTableLayout.getLinkedAdapterRowsModifications() and AdaptiveTableLayout.getLinkedAdapterColumnsModifications().
-Don't forget to check AdaptiveTableLayout.isSolidRowHeader() flag. If it's false, you need to ignore switching first elemet in each row.
+<b>LinkedAdaptiveTableAdapter</b> - 适用于大量数据的适配器。警告！这种类型的适配器不会更改原始数据。它包含带有更改项和链接的矩阵。要获取更改的数据，您需要使用 AdaptiveTableLayout.getLinkedAdapterRowsMo​​difications() 和 AdaptiveTableLayout.getLinkedAdapterColumnsModifications()。不要忘记检查 AdaptiveTableLayout.isSolidRowHeader() 标志。如果为 false，则需要忽略在每一行中切换第一个 elemet。
 
-<b>For both adapters you need to know all rows/columns widths, heights and rows/columns count before set adapter to AdaptiveTableLayout.</b>
-#### Fragment/Activity usage ####
+<b>对于这两个适配器，在将适配器设置为 AdaptiveTableLayout 之前，您需要知道所有行/列的宽度、高度和行/列计数。</b>
+#### Fragment/Activity 使用 ####
 ```groovy
 mTableLayout = (AdaptiveTableLayout) view.findViewById(R.id.tableLayout);
 ...
@@ -117,7 +116,7 @@ mTableLayout.setHeaderFixed(true);
 mTableLayout.setSolidRowHeader(true);
 mTableAdapter.notifyDataSetChanged();
 ```
-#### XML usage ####
+#### XML 用法 ####
 ```groovy
  <com.cleveroad.adaptivetablelayout.AdaptiveTableLayout
         android:id="@+id/tableLayout"
@@ -135,12 +134,3 @@ mTableAdapter.notifyDataSetChanged();
 ## Changelog
 See [changelog history].
 
-### Support ###
-If you have any questions, issues or propositions, please create a <a href="../../issues/new">new issue</a> in this repository.
-
-If you want to hire us, send an email to sales@cleveroad.com or fill the form on <a href="https://www.cleveroad.com/contact">contact page</a>
-
-Follow us:
-
-[![Awesome](/images/social/facebook.png)](https://www.facebook.com/cleveroadinc/)   [![Awesome](/images/social/twitter.png)](https://twitter.com/cleveroadinc)   [![Awesome](/images/social/google.png)](https://plus.google.com/+CleveroadInc)   [![Awesome](/images/social/linkedin.png)](https://www.linkedin.com/company/cleveroad-inc-)   [![Awesome](/images/social/youtube.png)](https://www.youtube.com/channel/UCFNHnq1sEtLiy0YCRHG2Vaw)
-<br/>
