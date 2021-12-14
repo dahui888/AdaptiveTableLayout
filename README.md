@@ -14,8 +14,8 @@
 
 [![Awesome](/images/logo-footer.png)](https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts)
 <br/>
-## 设置和使用
-### 安装
+## 导入和使用
+### 导入
 通过 gradle : 
 ```groovy
 dependencies {
